@@ -1,5 +1,5 @@
-key_gen: key_gen.c
-	gcc -Wall -Werror key_gen.c -o key_gen
+key_gen: src/key_gen.c src/bitfuncts.c
+	gcc -o key_gen src/key_gen.c src/bitfuncts.c
 
 clean:
-	rm -f key_gen
+	rm -rf key_gen sec_key.bin
